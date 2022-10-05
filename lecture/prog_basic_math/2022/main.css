@@ -1,0 +1,21 @@
+h2 {
+    border-left: 1px solid rgb(44, 165, 190);
+    border-bottom: 2px solid rgb(44, 165, 190);
+    padding-left: 10px;
+}
+
+h3 {
+    border-left: 1px solid rgb(112, 190, 44);
+    border-bottom: 2px solid rgb(112, 190, 44);
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.content {
+    padding-left: 20px;
+}
+
+.grayout {
+    background-color: lightgray;
+    opacity: 0.3;
+}
