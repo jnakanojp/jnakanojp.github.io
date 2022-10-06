@@ -22,3 +22,8 @@ h3 {
     background-color: lightgray;
     opacity: 0.3;
 }
+
+.content b {
+    color: red;
+    text-decoration: underline;
+}
