@@ -1,0 +1,678 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>2023都市計画学会大会論文</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="042668b0-7e93-471f-a78f-d83e221bc8ca" class="page sans"><header><h1 class="page-title">2023都市計画学会大会論文</h1></header><div class="page-body"><figure id="4250297e-708f-4f6a-8f57-2dd5a720be44" class="link-to-page"><a href="https://www.notion.so/D-4250297e708f4f6a8f572dd5a720be44"><span class="icon">⚠️</span>情報と回遊(D論)</a></figure><p id="f5a05ce2-2bd3-4db4-a11f-907416ed759a" class="">を参考に色々混ぜる</p><h1 id="9fae8c2c-fd0a-4c50-94d5-6d0ef5d120ad" class="">1. 本研究の背景と目的</h1><p id="4e777862-cc20-4ce5-a09b-bdc84b1e6e03" class="">　近年、観光に訪れた来街者が回遊を行う際の情報提供の行い方を工夫することで、回遊行動を誘発・誘導することができるのではないかということが実証的に検証されはじめている。</p><ul id="f7ddb224-c551-46af-b0b8-57b4b768183f" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-teal">引用：携帯位置情報の読み解き —観光資源を発掘せよ，観光移動需要を察知せよ，観光モードを判別せよ</mark></li></ul><p id="3d099696-3f97-48f5-b4cf-8287d9b21ca6" class="">観光行動を誘発するには、情報から受け取るイメージが重要であり、観光の基本形は回遊行動であるという言説(新現代観光総論p122, p124)に加え、昨今のSNS等による消費者生産メディアがきっかけとなり観光行動を行う風潮からいって、このような検証は自然な流れといえる。<div class="indented"><ul id="33c8d76e-0414-447e-ba30-f13437ac4866" class="bulleted-list"><li style="list-style-type:disc">令和4年版観光白書においても、「持続可能な観光」が重要視されており、特に、観光コンテンツにおいては、「地域の負担に配慮しつつ、地域ならではの観光資源（自然、食、歴史・文化、生業等）を活用したコンテンツの造成から販路開拓まで一貫した支援を実施」との記述がある。<ul id="132a7566-6602-4a58-84f8-b82610a43876" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-teal">引用：令和4年版観光白書</mark></li></ul></li></ul></div></p><ul id="c1b7698e-2f79-4804-9c3e-76c74651e5e6" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">(モノ・コトなどの定義・説明が必要。)</mark></strong></li></ul><ul id="9f742b0a-c3af-4b4a-a706-f0a109998ea2" class="bulleted-list"><li style="list-style-type:disc">しかし、観光コンテンツを回遊用のパッケージとして上手く作るのって難しくない？今モノとして残っているものだとその場に連れて行って説明すると皆納得するだろうけれど、そういう「モノ」が豊富な地域ばかりではないし、どうしてもモノの整備にはコストがかかるし、モノ同士間の移動のときに何も面白いものがないのか？みたいな問題もある。</li></ul><ul id="58afde69-b748-43bf-b0ee-1be6d92eb0fc" class="bulleted-list"><li style="list-style-type:disc">でもそもそも、観光ってモノをただただ鑑賞するだけじゃないよねー。コトを知らないと楽しめない部分が結構ある。</li></ul><ul id="b1f82676-6173-457e-b2e4-283c8afe3406" class="bulleted-list"><li style="list-style-type:disc">また、コトが重要なもの（お祭りなど）も、お祭りの開催期間しか楽しめないのか？というと、もちろんベストはお祭りの開催期間に直接参加して楽しむことになるのだろうけれども、お祭りの情報を見ながら現地でその場所性を味わうというのもある。（コンテンツツーリズムでよくある聖地巡礼はこれ）</li></ul><ul id="9cc627ea-0301-4d55-9d23-fbfdac536293" class="bulleted-list"><li style="list-style-type:disc">そこで、モノとして残っていないが、情報としては残っているようなもの（コトという）も上手く使って回遊用のパッケージを作れないだろうか、と考えるわけである。そのような動きもある。<ul id="8a38121c-9282-48dc-9a3e-9d4f87d1b4e2" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-teal">引用：すみだメタ観光祭</mark></li></ul></li></ul><ul id="386fa134-1f8a-4adb-9d41-d1d6c4c1cd9e" class="bulleted-list"><li style="list-style-type:disc">でも、どんな情報が回遊行動を誘発させるのかはあまり明らかになってないから、経験と勘に頼ってしまっている問題がある。</li></ul><ul id="f9e0d792-6c52-478e-b201-99170d9c8702" class="bulleted-list"><li style="list-style-type:disc">しかし、機械学習全盛のいま、情報の渡す・渡さないを変数として変化させ、来街者がどのような回遊行動をとったかを実験し、結果を分析すれば、情報のどんな特徴量が回遊行動を誘発するのか、が分析できるのではないか。</li></ul><ul id="43f73b11-b282-4a88-aeb0-e73562daff1c" class="bulleted-list"><li style="list-style-type:disc">もしこれが明らかになって、情報影響下での回遊行動のモデルが作れれば、どのような情報を来街者に渡せば回遊行動が誘発でき、満足度が高くなるかを考えることができるし、さらには、「遠くの面白いモノ・コト」と「近くのあまり面白くないモノ・コト」のどちらを回遊に組み込むべきかだったり、「遠くの面白いモノ・コト」への移動コスト低減のためのインフラ整備のコストが割に合うか合わないかを考えることができるようになる。つまり、モノ・コト・インフラの投資配分のパレートフロンティアを求めることができるのである。これにより、コンテンツの品質向上のみならず、まちづくりの意思決定にかかる手間を減らすことが出来る。</li></ul><ul id="fde7aaac-85e5-4b4f-a030-e26d0733bf58" class="bulleted-list"><li style="list-style-type:disc">したがって、本研究では来街者にわたす情報を複数用意し、来街者が実際に時間制約ありの回遊行動を行ったかをGPSでログをとり、情報のうちどの特徴量が回遊行動を誘発し長引かせているのかを明らかにすることを目的とする。</li></ul><ul id="6655710a-e063-4842-a629-90c9541e608b" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-red">(どこかにフィールドミュージアムの定義か、少なくとも説明が必要)</mark></strong></li></ul><ul id="19152a91-a1f6-4aed-a40e-5d659b62cff4" class="bulleted-list"><li style="list-style-type:disc">2章では既往研究とともに研究の方向性を明らかにする。3章ではフィールドミュージアム設計システムの概要を示す。4章ではケーススタディとして行った情報提示後の回遊実験の結果を分析し、情報影響下での回遊行動のモデルのパラメーターを推定する。5章ではケーススタディを踏まえ、フィールドミュージアム設計システムの必須要件と今後の改善点について述べる。</li></ul><p id="667d6dc7-e319-44fa-9178-ce9a60cbe066" class=""><mark class="highlight-blue"><strong>メモ：ここは書けそう。だが、他の都市計画学会の論文を見た限り、冗長すぎるかも。ちょっと関係しそうな都市計画学会の論文を見て、平均的読者の知識に合わせ、適切な分量に調整する必要あり。</strong></mark></p><h1 id="e115ef4c-3026-4c50-b22a-edfb2c976408" class="">2. 既往の研究</h1><h2 id="0cf0133b-49a9-490c-bab7-c72cade40c50" class="">2.1. 視覚情報は大事である</h2><ol type="1" id="aa376659-7d29-4a8a-b0a2-c46957040c4e" class="numbered-list" start="1"><li>Natureに掲載されたVector-based pedestrian navigation in cities：人は最短距離より、目標物を見失わないような経路選択をする傾向にある。</li></ol><ol type="1" id="f6074f34-654f-423f-a9fa-48114747f77a" class="numbered-list" start="2"><li>Computers, Environment and Urban Systemsに掲載されたAnalyzing how travelers choose scenic routes using route choice models：経路選択に対する経路から見える景観の影響を調査した論文。景観が良いところは観光的な効用が高く、移動時間が伸びることによる負の効用を打ち消すという結果が出ている。</li></ol><ul id="0dbb8efd-f6a3-4d0b-bb74-46b8e1e1def6" class="bulleted-list"><li style="list-style-type:disc">上記の論文の結果より、非日常の移動である観光時の回遊行動では、時間的、空間的な最短経路が経路選択上のベストとはいえず、むしろ視覚的な安心感・楽しみを持つ経路をよりよい経路として選択するということが推察される。したがって、この研究では回遊行動時に与える情報としては視覚情報を取り扱うことにし、視覚刺激として写真を見せることにした。</li></ul><p id="a05b0327-3bcc-4f18-87ae-a3bbf796984a" class=""><mark class="highlight-blue"><strong>メモ：ここは書けそう。</strong></mark></p><h2 id="cadf1589-1c97-4b79-aab5-0923b8731cde" class="">2.2. 深層機械学習の発展</h2><ul id="29a647b8-6862-4ba8-b16f-f88e625d2a61" class="bulleted-list"><li style="list-style-type:disc">画像分類<ul id="c2cf383a-984a-41ee-a26d-1b5424d3bf8f" class="bulleted-list"><li style="list-style-type:circle">AlexNet(2012)</li></ul><ul id="f9637ff7-ee9b-4eff-a5a9-8f5622841490" class="bulleted-list"><li style="list-style-type:circle">MobileNetV2(2018)</li></ul><ul id="617c5cef-d7c5-4c75-b166-6bc29cc4db40" class="bulleted-list"><li style="list-style-type:circle">（最新も紹介すべきか？）</li></ul><p id="ab62ba56-e462-4ccc-8b4e-082624f1f460" class=""><mark class="highlight-blue"><strong>メモ：ここは書けそう。</strong></mark></p></li></ul><ul id="b06a0643-962b-4c96-8373-a262a859db38" class="bulleted-list"><li style="list-style-type:disc">Semantic Segmentation<ul id="90a00ef7-c13d-41ae-ad66-c384cea97535" class="bulleted-list"><li style="list-style-type:circle">FCN</li></ul><ul id="970c1780-3562-4cb6-b575-efba9492e422" class="bulleted-list"><li style="list-style-type:circle">U-Net</li></ul><ul id="11ca4ae8-916a-42bd-a9ca-49100f993515" class="bulleted-list"><li style="list-style-type:circle">SegNet</li></ul><ul id="d43d8cc0-f8e1-4618-8410-78a72b6057f3" class="bulleted-list"><li style="list-style-type:circle">PSPNet</li></ul><ul id="01f40e85-b42f-42b0-8b2a-6e1e703955b1" class="bulleted-list"><li style="list-style-type:circle">Deeplab v3+</li></ul><ul id="589bbdeb-c44a-40dd-a46d-bfbfd1ec3021" class="bulleted-list"><li style="list-style-type:circle">（全部は紹介しない。最初のものと実装として使えそうなものと最新だけかも）</li></ul><p id="3ae5e35b-3e75-42d5-bbf1-361258414fc3" class=""><mark class="highlight-blue"><strong>メモ：ここはもうちょっとサーベイと実装テストが必要。</strong></mark></p></li></ul><ul id="1516d0f6-2661-4240-b708-19944d449d78" class="bulleted-list"><li style="list-style-type:disc">生成系AI<ul id="665eaa09-bef8-4e9b-a09f-1c407c857e50" class="bulleted-list"><li style="list-style-type:circle">画像生成(Stable Diffusion)</li></ul><ul id="b91b9a29-d879-4a09-aa99-2cf37873eefe" class="bulleted-list"><li style="list-style-type:circle">文章生成(GPT-3)</li></ul><p id="c1eb56bb-3a6d-4f06-946e-25621f357aef" class=""><mark class="highlight-blue"><strong>メモ：ここは展望的な部分なので、ちょっと真面目にサーベイしたら書けそう。</strong></mark></p></li></ul><h2 id="24d13e74-1d9a-447c-b54c-89948fdaa9a9" class="">2.3. 回遊行動の分析手法</h2><ul id="943b1605-b805-4ab9-b1a7-ce66ddfd9917" class="bulleted-list"><li style="list-style-type:disc">Recursive Logit(Fosgerau)</li></ul><ul id="727c5043-ee2b-405f-96f9-fb0a97f4cd80" class="bulleted-list"><li style="list-style-type:disc">Oyama, Hato 2017 (プリズム制約)<p id="c6ec591c-b678-4aaa-8d02-15ff244f190e" class=""><mark class="highlight-blue"><strong>メモ：ここは割と作文が必要。（流暢に説明できる状態に頭が整理されていない）</strong></mark></p></li></ul><p id="a3414f7c-c17d-4ff0-bc44-6746aa9da22e" class="">
+</p><h2 id="d259ef30-0c25-4dc5-95ed-2c49bd77e93e" class="">2.4. 既往研究をもとにした、本研究の位置づけ</h2><ul id="aab73562-5859-4916-8407-75b375d563ab" class="bulleted-list"><li style="list-style-type:disc">深層機械学習の発展により、今までは質的分析でのみ取り扱えていたような、写真のような情報の種類についても、量的分析に結び付けられるようになった。</li></ul><ul id="5c56c66b-6c38-49eb-a68f-0cd237472e9f" class="bulleted-list"><li style="list-style-type:disc">また、適切な生成モデルとデータセットを用意することで、テキスト入力に基づく画像生成、文章生成が行えるようになった。同様に、フィールドミュージアムの設計（経路決定・提示情報選択）についても、適切な生成モデルやデータセットを用意することで、テキスト入力に基づいて行えるようになることが予測される。</li></ul><ul id="3e2f8981-c2a3-4dc7-b27d-ff677956d3df" class="bulleted-list"><li style="list-style-type:disc">現段階では本研究に置いてテキスト入力に基づいたフィールドミュージアムの設計までは取り扱わないが、将来的にはテキスト入力による逐次的なフィールドミュージアムの設計システムを構築することを目指し、生成モデルについて明らかにする。<p id="b78d4b09-f878-4577-8b36-3a04039ff50a" class=""><mark class="highlight-blue"><strong>メモ：ここは書けそう。</strong></mark></p></li></ul><p id="06929f33-ace9-4ffb-8388-6ce5fe9b8735" class="">
+</p><h1 id="781227a7-0882-444b-a7e7-0a24a9fa4d63" class="">3. システムのフレームワーク</h1><h2 id="ec1ee23a-554b-465d-9c40-b95410aadec0" class="">3.1. フィールドミュージアムの構成</h2><p id="88644808-3f57-488d-9cc8-b7f63ce4c1bd" class="">本研究で取り扱うフィールドミュージアムは、以下の特徴をもつものとする。</p><ul id="b4c3595d-4c7a-4b7e-aaba-7afde2a0bc99" class="bulleted-list"><li style="list-style-type:disc">提示される視覚刺激（写真）は、キャプションと共に提示されるが、関連する位置情報は提示されない。</li></ul><p id="c83b91b5-2113-470a-8db1-40b369716958" class=""><strong><mark class="highlight-red">WIP</mark></strong></p><p id="4ebbf1ec-3e2d-4aac-9313-6f3f01a3b791" class=""><strong><mark class="highlight-blue">メモ：ここがいまのところ精緻に言語化出来る気がしない、よーく考える必要あり</mark></strong></p><h2 id="f4fd22e0-007f-465b-aa44-c206969430b4" class="">3.2. モデルシステム</h2><ul id="b9a0383f-d788-4702-a5de-d9cb95621977" class="bulleted-list"><li style="list-style-type:disc">ネットワークG=(N,A)とする。(以下略・大山・羽藤2017を参照する)</li></ul><ul id="172d2ec1-2e52-44ec-8744-a35334bee868" class="bulleted-list"><li style="list-style-type:disc">効用関数入れるのはここか？視覚情報提示項を一般論的に入れる。<p id="de5788e9-9826-4cc0-a711-e9f17d545e37" class=""><mark class="highlight-blue"><strong>メモ：ここは視覚情報提示項を一般的に書くのであれば、書けそう。</strong></mark></p></li></ul><h2 id="d9ce6c34-9e0a-4a31-bbef-e5d0f19123e7" class="">3.3. データベースとデータ処理システム</h2><p id="19298ec8-89fe-43e1-aefe-a995c7d25be7" class=""><mark class="highlight-blue"><strong>メモ：ここは、3.2. との違いを端的にわかりやすく書くことが必要。情報項を具体化したということを図と式で説明する。</strong></mark></p><h3 id="51715e2c-aaf2-41ff-a82c-b330f1e270e6" class="">3.3.1. 提示写真一覧から、提示写真ダミーとその写真が効用を高める範囲を何らかの分布を用いて計算する場合の式は以下のようになる。</h3><ul id="969c3a5b-9dab-45d3-89a1-5c22baa5f8bd" class="bulleted-list"><li style="list-style-type:disc">各写真の提示が、商店街や団地の即時効用へどのように影響するか調べたい</li></ul><ul id="b4153363-a18c-4fc6-96e6-13c2ba842016" class="bulleted-list"><li style="list-style-type:disc">ノードkに、kから商店街や団地までの距離D(k, α)を入力変数とするA(k, α)から求まる、ノードkの商店街や団地への帰属度を属性として持たせる</li></ul><ul id="f970dcf0-6a2d-44e0-a3ec-542e9f9c77db" class="bulleted-list"><li style="list-style-type:disc">即時効用は、以下のように定式化される
+（下記A(k, α)はA(a, α)の間違い）</li></ul><figure id="671fda45-b24b-4459-a784-1d192ced63a2" class="image"><a href="2023%E9%83%BD%E5%B8%82%E8%A8%88%E7%94%BB%E5%AD%A6%E4%BC%9A%E5%A4%A7%E4%BC%9A%E8%AB%96%E6%96%87%20042668b07e93471fa78fd83e221bc8ca/Untitled.png"><img style="width:1016px" src="2023%E9%83%BD%E5%B8%82%E8%A8%88%E7%94%BB%E5%AD%A6%E4%BC%9A%E5%A4%A7%E4%BC%9A%E8%AB%96%E6%96%87%20042668b07e93471fa78fd83e221bc8ca/Untitled.png"/></a></figure><p id="dc4604ea-8ffc-451f-897a-e6f69908d404" class="">　<mark class="highlight-blue"><strong>メモ：式の自然言語での説明に苦労しそうだが、苦労すれば書けそう。</strong></mark></p><h3 id="b18cf257-ec3a-4a4c-b21d-e718411e6e58" class="">3.3.2. 提示写真一覧から、提示写真のMobileNetV2を用いて写真画像に対して計算される1280次元の特徴量ベクトルと、その写真が効用を高める範囲を何らかの分布を用いて計算する場合の式は以下のようになる。</h3><ul id="4bfc544d-386c-4145-8805-8cd88b24e97c" class="bulleted-list"><li style="list-style-type:disc">写真提示ダミーではなく、写真の示す内容が効用関数へどのように影響するか調べたい</li></ul><ul id="c99062a0-cef2-4a0e-b230-aee476399d3e" class="bulleted-list"><li style="list-style-type:disc">写真を提示されたか提示されなかったの説明変数P(p, c(u))だけではなく、写真の示す内容を表す画像特徴量I(p)も入れる</li></ul><ul id="e4880e09-97ce-467e-852b-2f1b9ec8dfdd" class="bulleted-list"><li style="list-style-type:disc">効用関数は以下となる</li></ul><p id="4de7b6c7-4d56-46fb-af5a-dfd104183111" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo stretchy="false">(</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mi>k</mi><mo separator="true">,</mo><mi>u</mi><mo separator="true">,</mo><mi mathvariant="bold-italic">β</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mo>∑</mo><mrow><mi>α</mi><mo>∈</mo><mo stretchy="false">{</mo><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">s</mi><mo separator="true">,</mo><mi mathvariant="normal">h</mi><mi mathvariant="normal">c</mi></mrow><mo stretchy="false">}</mo></mrow></msub><msub><mo>∑</mo><mi>i</mi></msub><msub><mi>β</mi><mrow><mi>i</mi><mo separator="true">,</mo><mi>α</mi></mrow></msub><mrow><mo fence="true">(</mo><msub><mo>∑</mo><mrow><mi>p</mi><mo>∈</mo><mo stretchy="false">{</mo><mrow><mi mathvariant="normal">a</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">p</mi><mi mathvariant="normal">h</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">o</mi></mrow><mo stretchy="false">}</mo></mrow></msub><msub><mi>I</mi><mi>i</mi></msub><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>p</mi><mo separator="true">,</mo><mi>c</mi><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo fence="true">)</mo></mrow><mi>A</mi><mo stretchy="false">(</mo><mi>k</mi><mo separator="true">,</mo><mi>α</mi><mo stretchy="false">)</mo><mo>+</mo><msub><mi>β</mi><mrow><mi>D</mi><mi>T</mi></mrow></msub><msub><mrow><mi>D</mi><mi>T</mi></mrow><mi>a</mi></msub></mrow><annotation encoding="application/x-tex">v(a|k,u,\boldsymbol{\beta}) = \sum_{\alpha \in \{\mathrm{ss,hc}\}}\sum_{i}\beta_{i,\alpha}\left(\sum_{p \in \{\mathrm{allphoto}\}}I_i(p) P(p, c(u))\right) A(k,\alpha) + \beta_{DT}{DT}_a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord"><span class="mord boldsymbol" style="margin-right:0.03403em;">β</span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.80002em;vertical-align:-0.65002em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.22528999999999993em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="mrel mtight">∈</span><span class="mopen mtight">{</span><span class="mord mtight"><span class="mord mathrm mtight">ss</span><span class="mpunct mtight">,</span><span class="mord mathrm mtight">hc</span></span><span class="mclose mtight">}</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.47471em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.16195399999999993em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29971000000000003em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.311664em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.22528999999999993em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mrel mtight">∈</span><span class="mopen mtight">{</span><span class="mord mtight"><span class="mord mathrm mtight">allphoto</span></span><span class="mclose mtight">}</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.47471em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07847em;">I</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.07847em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal">p</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">c</span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mclose">))</span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">A</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span></p><p id="b98b575a-f58e-4079-9749-3694a7e439c1" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo stretchy="false">(</mo><mi>a</mi><mi mathvariant="normal">∣</mi><mi>k</mi><mo separator="true">,</mo><mi>u</mi><mo separator="true">,</mo><mi mathvariant="bold-italic">β</mi><mo stretchy="false">)</mo><mo>=</mo><msub><mo>∑</mo><mrow><mi>α</mi><mo>∈</mo><mo stretchy="false">{</mo><mrow><mi mathvariant="normal">s</mi><mi mathvariant="normal">s</mi><mo separator="true">,</mo><mi mathvariant="normal">h</mi><mi mathvariant="normal">c</mi></mrow><mo stretchy="false">}</mo></mrow></msub><msubsup><mi mathvariant="bold-italic">β</mi><mrow><mrow><mi mathvariant="normal">p</mi><mi mathvariant="normal">f</mi></mrow><mtext> </mtext><mi>α</mi></mrow><mi mathvariant="normal">⊤</mi></msubsup><mrow><mo fence="true">(</mo><msub><mo>∑</mo><mrow><mi>p</mi><mo>∈</mo><mo stretchy="false">{</mo><mrow><mi mathvariant="normal">a</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">l</mi><mi mathvariant="normal">p</mi><mi mathvariant="normal">h</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">t</mi><mi mathvariant="normal">o</mi></mrow><mo stretchy="false">}</mo></mrow></msub><mi mathvariant="bold-italic">I</mi><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo><mi>P</mi><mo stretchy="false">(</mo><mi>p</mi><mo separator="true">,</mo><mi>c</mi><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo fence="true">)</mo></mrow><mi>A</mi><mo stretchy="false">(</mo><mi>k</mi><mo separator="true">,</mo><mi>α</mi><mo stretchy="false">)</mo><mo>+</mo><msub><mi>β</mi><mrow><mi>D</mi><mi>T</mi></mrow></msub><msub><mrow><mi>D</mi><mi>T</mi></mrow><mi>a</mi></msub></mrow><annotation encoding="application/x-tex">v(a|k,u,\boldsymbol{\beta}) = \sum_{\alpha \in \{\mathrm{ss,hc}\}}\boldsymbol{\beta}^\top_{\mathrm{pf}\,\alpha}\left(\sum_{p \in \{\mathrm{allphoto}\}}\boldsymbol{I}(p) P(p, c(u))\right) A(k,\alpha) + \beta_{DT}{DT}_a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mopen">(</span><span class="mord mathnormal">a</span><span class="mord">∣</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord"><span class="mord boldsymbol" style="margin-right:0.03403em;">β</span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1.80002em;vertical-align:-0.65002em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.22528999999999993em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span><span class="mrel mtight">∈</span><span class="mopen mtight">{</span><span class="mord mtight"><span class="mord mathrm mtight">ss</span><span class="mpunct mtight">,</span><span class="mord mathrm mtight">hc</span></span><span class="mclose mtight">}</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.47471em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord"><span class="mord"><span class="mord boldsymbol" style="margin-right:0.03403em;">β</span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9334479999999998em;"><span style="top:-2.4530000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathrm mtight" style="margin-right:0.07778em;">pf</span></span><span class="mspace mtight" style="margin-right:0.19516666666666668em;"></span><span class="mord mathnormal mtight" style="margin-right:0.0037em;">α</span></span></span></span><span style="top:-3.1473400000000002em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">⊤</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.383108em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:-0.0000050000000000050004em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.22528999999999993em;"><span style="top:-2.40029em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">p</span><span class="mrel mtight">∈</span><span class="mopen mtight">{</span><span class="mord mtight"><span class="mord mathrm mtight">allphoto</span></span><span class="mclose mtight">}</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.47471em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord"><span class="mord boldsymbol" style="margin-right:0.07778em;">I</span></span></span><span class="mopen">(</span><span class="mord mathnormal">p</span><span class="mclose">)</span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="mopen">(</span><span class="mord mathnormal">p</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">c</span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mclose">))</span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal">A</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.0037em;">α</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.05278em;">β</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.05278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.02778em;">D</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">D</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span><span>﻿</span></span>　<div class="indented"><p id="6c0b6e33-e1f0-4ee8-8866-e0656ba5a2b2" class=""><mark class="highlight-blue"><strong>メモ：式の自然言語での説明に苦労しそうだが、苦労すれば書けそう。</strong></mark></p></div></p><p id="151d8c91-1d17-437d-a401-1cff5d626b95" class="">
+</p><h3 id="f034c05c-a626-42ad-9423-e68458f67aa6" class="">3.3.3. 提示写真一覧から、提示写真に対してSemantic Segmentationを行い、各セグメントの占める面積を特徴量ベクトルとして計算する場合の式は以下のようになる。</h3><p id="034ec8c4-a597-4bd5-948e-d15d63370c65" class=""><strong><mark class="highlight-red">WIP</mark></strong></p><p id="ea346fe0-1b5f-42bd-af73-91a47b1acd09" class="">　<mark class="highlight-blue"><strong>メモ：うーん、式は多分書けるけれど、Semantic Segmentation自体に現状見通しが立っていない。</strong></mark></p><h2 id="bec737d9-a9b4-49e1-9fc4-d6d3b0513d05" class="">3.4. ミュージアム最適設計の数値計算例</h2><ul id="fa3c8e5a-710e-4250-bbaa-bf990291a7ac" class="bulleted-list"><li style="list-style-type:disc">ここは適当なパラメーターを入れて現実のデータとは関係なく計算すればよいのだな</li></ul><p id="f02a0792-8c9e-4a03-b0a9-4aedd30bd368" class=""><strong><mark class="highlight-red">WIP</mark></strong><div class="indented"><p id="14008ed6-efd7-4d2f-bc22-87e2f7f801cd" class=""><mark class="highlight-blue"><strong>メモ：1週間ぐらいはかかりそう？</strong></mark></p></div></p><h1 id="8c3a25d6-546c-465b-90f0-27807947571c" class="">4. ケーススタディ</h1><h2 id="03ba71bb-4b4e-4b90-a93c-a231587d61ac" class="">4.1. 江東区実験概要</h2><ul id="33abef70-d083-4943-993e-76dfda34f7d7" class="bulleted-list"><li style="list-style-type:disc">回遊行動モデル推定のための行動データ取得を目的とした実証実験「海の手線ライド2020」(東京都江東区・墨田区 2020年開催)を実施</li></ul><ul id="b7e447a2-24cd-4571-9f22-c77c969b63a8" class="bulleted-list"><li style="list-style-type:disc"><strong>海の手線実験の概要</strong><ul id="c63c43c3-e335-4ef2-9615-8fcb6323024c" class="bulleted-list"><li style="list-style-type:circle"><strong>a 実証実験参加者の体験内容 </strong>
+定期運行タクシーに乗車、江東区・墨田区の4地区(豊洲、辰巳、砂町、両国)で下車、30分の間自由に歩く。下車時に指示書による行動指示に加え、紙パンフレットとスマートフォンアプリの両者で写真・文章で現地情報が提供される。</li></ul><ul id="bea75ef6-08e7-414b-90d1-b3b28212f716" class="bulleted-list"><li style="list-style-type:circle"><strong>b 収集データ</strong>
+ 参加者の移動(1Hz)・周囲のBluetoothデバイス数(1Hz)・通知された情報の表示・非表示イベント(時刻)</li></ul><ul id="92ccb267-0dd5-4e39-95e2-ab87e6258993" class="bulleted-list"><li style="list-style-type:circle">砂町地区での回遊の条件<ul id="2054001d-a8c7-4ef9-9dbf-d025d90c5576" class="bulleted-list"><li style="list-style-type:square">「避難計画を立てよ」という指示の下、砂町商店街やその周辺に建つ団地などの回遊を行わせた</li></ul><ul id="fdd28c00-952b-4f1d-82a2-494c21303aca" class="bulleted-list"><li style="list-style-type:square">紙パンフレットとアプリによる計6枚の写真の提示を、実験計画法に基づき9条件設定し(図■)、回遊前〜回遊中に自由に鑑賞可能とした</li></ul></li></ul></li></ul><p id="dbe877f8-2af9-4005-b072-4135ae97ba2a" class="">　<mark class="highlight-blue"><strong>メモ：もちろん色々丁寧に説明する必要がある。</strong></mark></p><h2 id="c78875ac-14cb-4fff-93d6-43c69768d17a" class="">4.2. 歩行者モデルの推定結果</h2><p id="e7627e82-6790-4f08-b0c1-a4a0a5640d11" class=""><strong><mark class="highlight-red">WIP</mark></strong></p><ul id="2e8b778f-60a4-4160-8e70-a9bc7d8bd970" class="bulleted-list"><li style="list-style-type:disc">まず、前提条件として、ある場所の「商店街らしさ」「団地らしさ」を計算</li></ul><figure id="159eab49-b21d-4322-8e6f-e922b03ddc09" class="image"><a href="2023%E9%83%BD%E5%B8%82%E8%A8%88%E7%94%BB%E5%AD%A6%E4%BC%9A%E5%A4%A7%E4%BC%9A%E8%AB%96%E6%96%87%20042668b07e93471fa78fd83e221bc8ca/Untitled%201.png"><img style="width:2352px" src="2023%E9%83%BD%E5%B8%82%E8%A8%88%E7%94%BB%E5%AD%A6%E4%BC%9A%E5%A4%A7%E4%BC%9A%E8%AB%96%E6%96%87%20042668b07e93471fa78fd83e221bc8ca/Untitled%201.png"/></a></figure><p id="570bcc5d-e19d-4142-ab14-5c90c6304d17" class="">　<mark class="highlight-blue"><strong>メモ：もちろん色々丁寧に説明する必要がある。</strong></mark></p><h3 id="5ff50b8c-1db7-43e0-8039-2f6fd6f216cb" class="">4.2.1. とりあえず、提示写真ダミーの結果</h3><figure id="fcb7ce79-ab79-4153-9f0c-7c3cf812376b" class="image"><a href="2023%E9%83%BD%E5%B8%82%E8%A8%88%E7%94%BB%E5%AD%A6%E4%BC%9A%E5%A4%A7%E4%BC%9A%E8%AB%96%E6%96%87%20042668b07e93471fa78fd83e221bc8ca/Untitled%202.png"><img style="width:2346px" src="2023%E9%83%BD%E5%B8%82%E8%A8%88%E7%94%BB%E5%AD%A6%E4%BC%9A%E5%A4%A7%E4%BC%9A%E8%AB%96%E6%96%87%20042668b07e93471fa78fd83e221bc8ca/Untitled%202.png"/></a></figure><p id="74180113-2829-46ff-87f2-f880c7a0d2e8" class=""><mark class="highlight-blue"><strong>メモ：そりゃ写真提示ダミーで出るのは当たり前だし、何の新規性もないですよねー</strong></mark></p><h3 id="0e5a26b5-26a3-4ac1-aece-ffa56b600049" class="">4.2.2. MobileNetV2の1280次元の特徴ベクトル</h3><ul id="e518a561-2d35-4279-b97d-f610e47270ac" class="bulleted-list"><li style="list-style-type:disc">サンプル数が少なすぎて、overfitするので使える気がしない。PLSしても駄目。</li></ul><p id="1164ada0-acf3-4899-ac0c-675960670a22" class=""><strong><mark class="highlight-red">WIP</mark></strong></p><p id="be882075-42c1-4645-91b4-c9ad99bebb7c" class=""><mark class="highlight-blue"><strong>メモ：見通し立たず</strong></mark></p><h3 id="1b0eca27-e887-4591-9725-fd6ab6628a97" class="">4.2.3. Semantic Segmentationによる各セグメントの面積特徴ベクトル</h3><ul id="26d2f042-f5ad-4a2e-81a1-50d455838259" class="bulleted-list"><li style="list-style-type:disc">まだイケてる感じのSemantic Segmentationが出来ていない。</li></ul><ul id="2c1d114b-a683-42c2-bb40-b5e966752365" class="bulleted-list"><li style="list-style-type:disc">イケてる感じの訓練済みモデルが見つからず、転移学習が必要な場合、教師データを作るのが超大変なので、すぐ出来る気がしない。外注できるなら外注したいかも…</li></ul><p id="1610d2df-e629-4785-bdbe-54e289f1422a" class=""><strong><mark class="highlight-red">WIP</mark></strong></p><p id="8c6322dc-7bf9-4f78-a1bd-8378c18019ae" class=""><mark class="highlight-blue"><strong>メモ：イケてる感じのSemantic Segmentationの訓練済みモデルがあれば勝ち。なければタイムアウト</strong></mark></p><h2 id="87834a72-3093-43f5-8b7d-c7cb601be8bb" class="">4.3. 設計評価</h2><ul id="ac207081-074f-40b6-924c-f7b44ddda155" class="bulleted-list"><li style="list-style-type:disc">写真ダミーの結果だけでいうと、例えば2つのフィールドミュージアムの設計が考えられる。<ol type="1" id="74286e1d-0f12-48fe-9765-458d6b4426d8" class="numbered-list" start="1"><li>商店街の良さを味わうことを目的とする場合
+この場合は、団地への効用が低く、商店街への効用が高い写真を選んで提示すればよい。</li></ol><ol type="1" id="309b1342-ae50-431a-9f1c-1d7509b407b7" class="numbered-list" start="2"><li>砂町地区の水害に対する脆弱性を理解し、防災的な観点で地区計画を行うことを目的とする場合
+この場合は、団地への効用が高く、商店街への効用が低い写真を選んで提示すれば良い。</li></ol><p id="c6a49a22-a673-48b4-ae20-5e5770cdad00" class="">多分、1〜2間はパレートフロンティアになるのではないかな…</p></li></ul><ul id="eec9eea6-f515-403b-a9d9-ddbda6de2c55" class="bulleted-list"><li style="list-style-type:disc">視覚情報提示をどれだけ変えても、時間制約と体力制約等から、回遊が誘発されない場所というのはあるはず。もし、そこを回遊させたいのなら多分インフラに投資するなどして時間制約・体力制約の負の効用を低減させる必要がある。</li></ul><p id="f655e64e-9d33-42b7-a079-fd0280d00be4" class=""><strong><mark class="highlight-red">WIP</mark></strong></p><p id="3be845ab-7279-46be-88f2-a29213a6243e" class=""><mark class="highlight-blue"><strong>メモ：イケてる感じのSemantic Segmentationの訓練済みモデルがあれば勝ち。なければタイムアウト</strong></mark></p><h1 id="ad54397f-f143-4882-898e-e04e942f4338" class="">5. 結論と今後の展望</h1><ul id="5550af1e-3cbe-4db2-b107-32662bbb5b02" class="bulleted-list"><li style="list-style-type:disc">本研究では、視覚情報提示による回遊行動の変化のモデルを示した。</li></ul><ul id="5a1b00df-599f-4c9b-8a9b-6e4061f0e288" class="bulleted-list"><li style="list-style-type:disc">これにより、（写真提示ダミー以外の結果が出れば…）視覚情報提示を変化させることでどのように回遊が変化するかが推定できるようになった。</li></ul><ul id="057e491e-b48c-4734-bef2-94830cfb4b93" class="bulleted-list"><li style="list-style-type:disc">つまり見せる写真によって回遊行動がコントロールできるようになった。</li></ul><ul id="6ae70504-2fe1-4675-87c8-98e2451cdbea" class="bulleted-list"><li style="list-style-type:disc">逆にいえば、させたい回遊行動を決めれば、どのような写真を見せればその回遊行動が誘発できるのかがわかった。</li></ul><ul id="d8a8ae9a-2868-4546-aaab-a09e66663143" class="bulleted-list"><li style="list-style-type:disc">視覚情報提示での回遊行動の変化の限界もわかる。</li></ul><ul id="856946c2-a9cd-46f4-b6e9-9b1922bd23d4" class="bulleted-list"><li style="list-style-type:disc">モノ、コト、インフラへの投資への配分を変化させることで、効用一定のもと回遊行動の変化を推測することが出来、これは、パレートフロンティアになっている。</li></ul><ul id="f75a2cd1-acd9-443e-8dc4-6d838ab99e4d" class="bulleted-list"><li style="list-style-type:disc">将来的には、システムがパレートフロンティアを提示した上で、人間がテキスト入力に基づいて鑑賞したいフィールドミュージアム（つまりどのような観光回遊行動をしたいかということ）を指定すれば、その人の好みのフィールドミュージアムの設計が可能になるだろう。その人、は、まちづくりをしている側でもよいし、来街者でもよい。（まちづくり側と来街者の間でシステムを介したフィードバックがあれば面白いけれど、それが観光まちづくりに良い影響を及ぼすかは未知数かなぁ…）</li></ul><p id="99186245-e89f-4eaf-a92b-70d3702c8bac" class=""><strong><mark class="highlight-red">WIP</mark></strong></p><p id="b4e26ed0-3e5d-48a9-9a45-0d25ef039199" class=""><mark class="highlight-blue"><strong>メモ：イケてる感じのSemantic Segmentationの訓練済みモデルがあれば勝ち。なければタイムアウト</strong></mark></p><p id="0616721d-6c77-4e69-8fca-a3acd3b04674" class="">
+</p></div></article></body></html>
