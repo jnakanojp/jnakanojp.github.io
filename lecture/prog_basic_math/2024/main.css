@@ -1,0 +1,33 @@
+h2 {
+    border-left: 1px solid rgb(44, 165, 190);
+    border-bottom: 2px solid rgb(44, 165, 190);
+    padding-left: 10px;
+}
+
+h3 {
+    border-left: 1px solid rgb(112, 190, 44);
+    border-bottom: 2px solid rgb(112, 190, 44);
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.grayout {
+    background-color: lightgray;
+    opacity: 0.3;
+}
+
+.content b {
+    color: red;
+    text-decoration: underline;
+}
