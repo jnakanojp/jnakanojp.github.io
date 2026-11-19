@@ -59,6 +59,11 @@ h3 {
     padding: 0.75rem;
     text-align: center;
     background-color: #f2f7ed;
+    color: #24421e;
+}
+
+.lesson-comments a {
+    color: inherit;
 }
 
 .lesson-comments p {
@@ -75,18 +80,11 @@ h3 {
     max-width: 100%;
     height: auto;
     margin: 0 auto;
+    background-color: #fff;
 }
 
-.lesson-comments.grayout {
-    background-color: #eee;
-}
-
-.lesson-comments.grayout a {
-    color: #555;
-}
-
-.lesson-comments.grayout img {
-    opacity: 0.45;
+.lesson-comments[inert] a {
+    text-decoration: none;
 }
 
 @media (max-width: 40rem) {
