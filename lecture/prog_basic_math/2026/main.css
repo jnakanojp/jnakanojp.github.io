@@ -22,12 +22,80 @@ h3 {
     flex-direction: column;
 }
 
-.grayout {
-    background-color: lightgray;
-    opacity: 0.3;
-}
-
 .content b {
     color: red;
     text-decoration: underline;
+}
+
+.lesson-content {
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.lesson-main {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.lesson-main p {
+    margin: 0.5em 0;
+    line-height: 1.6;
+}
+
+.lesson-main .lesson-date {
+    margin-top: 0;
+    color: #444;
+}
+
+.lesson-videos {
+    margin-top: 0.9rem;
+}
+
+.lesson-comments {
+    box-sizing: border-box;
+    flex: 0 0 12rem;
+    max-width: 100%;
+    padding: 0.75rem;
+    text-align: center;
+    background-color: #f2f7ed;
+}
+
+.lesson-comments p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.lesson-comments p + p {
+    margin-top: 0.5rem;
+}
+
+.lesson-comments img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.lesson-comments.grayout {
+    background-color: #eee;
+}
+
+.lesson-comments.grayout a {
+    color: #555;
+}
+
+.lesson-comments.grayout img {
+    opacity: 0.45;
+}
+
+@media (max-width: 40rem) {
+    .lesson-content {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .lesson-comments {
+        flex-basis: auto;
+    }
 }
